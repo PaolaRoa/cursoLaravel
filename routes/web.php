@@ -22,3 +22,5 @@ Route::get("/dashboard", [DashboardController::class, 'index'])->name('/dashboar
 
 use App\Http\Controllers\ExpenseReportController;
 Route::resource('/expense_reports', ExpenseReportController::class);
+
+Route::get('expense_reports/{id}/confirmDelete', [ExpenseReportController::class, 'confirmDelete']);
